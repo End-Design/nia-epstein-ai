@@ -3,7 +3,6 @@ import { DEFAULT_MODEL, SUPPORTED_MODELS } from "@/lib/constants";
 import { gateway } from "@/lib/gateway";
 import { niaEpsteinTools } from "@/lib/nia-tools";
 
-export const runtime = "edge";
 export const maxDuration = 300;
 
 // --- Rate Limiter ---
