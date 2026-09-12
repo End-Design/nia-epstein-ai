@@ -1,0 +1,28 @@
+# This file is used to build the infrastructure for a deployment.
+# After editing something here, apply the changes on the Diploi dashboard.
+# For more information, see https://diploi.com/yaml
+
+diploiVersion: v1.0
+components:
+  - hosts:
+      - port: 3000
+        endpoint: true
+        name: App
+        identifier: app
+    name: Next.js
+    identifier: next
+    folder: /
+    package: https://github.com/diploi/component-nextjs#v16.3.3
+    env:
+      include:
+        - value: https://gateway.ai.cloudflare.com/v1
+          name: AI_GATEWAY_BASE_URL
+        - value: ''
+          name: AI_GATEWAY_API_KEY
+        - value: ''
+          name: NIA_API_KEY
+        - value: ''
+          name: NIA_EPSTEIN_ARCHIVE_SOURCES
+        - value: ''
+          name: NIA_EPSTEIN_BIOGRAPHICAL_SOURCES
+addons: []
